@@ -1,2 +1,5 @@
 created header in html; created styles.css and linked to html
 COMMITTED
+
+copied example from class in JS using itunes.apple.com
+COMMITTED
