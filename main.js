@@ -3,7 +3,7 @@ const baseUrl = 'https://itunes.apple.com/search?term=';
 const searchForm = document.querySelector('#search-form');
 const resultsContainer = document.querySelector('#results-container');
 
-form.addEventListener('submit', function (event) {
+searchForm.addEventListener('submit', function (event) {
     // listen for the search form being submitted
     event.preventDefault();
     // prevent the page from reloading immediately, control when it reloads
@@ -51,15 +51,31 @@ function buildResultsHtml(resultsArray) {
     for (let result of resultsArray) {
 
         // artworkUrl100 -- ARTWORK
-        // trackName -- SONG TITLE
-        // artistName -- ARTIST NAME
-        // collectionName -- ALBUM TITLE
-        // releaseDate -- RELEASE DATE (NEEDS FORMATTING)
+        let artDiv = document.createElement('div');
+        let artElement = document.createElement('img');
+        artElement.src = result.artworkUrl100;
+        artDiv.appendChild(artElement);
+        resultsContainer.appendChild(artDiv);
 
+        // trackName -- SONG TITLE
+        let trackDiv = document.createElement('div');
+        let trackElement = document.createElement('h3');
+        trackElement.innerText = `Song: ${result.trackName}`;
+        trackDiv.appendChild(trackElement);
+        resultsContainer.appendChild(trackDiv);
+
+        // artistName -- ARTIST NAME
         let artistDiv = document.createElement('div');
-        let artistElement = document.createElement('h2');
-        artistElement.innerText = result.artistName;
+        let artistElement = document.createElement('h3');
+        artistElement.innerText = `Artist: ${result.artistName}`;
         artistDiv.appendChild(artistElement);
         resultsContainer.appendChild(artistDiv);
+
+        // collectionName -- ALBUM TITLE
+        let albumDiv = document.createElement('div');
+        let albumElement = document.createElement('h3');
+        albumElement.innerText = `Album: ${result.collectionName}`;
+        albumDiv.appendChild(albumElement);
+        resultsContainer.appendChild(albumDiv);
     }
 }
