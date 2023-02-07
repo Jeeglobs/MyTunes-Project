@@ -18,3 +18,6 @@ COMMITTED
 
 added while statement to replace search results; added audio bar and linked it to artwork
 COMMITTED
+
+added classes to elements within #results-container
+COMMITTED

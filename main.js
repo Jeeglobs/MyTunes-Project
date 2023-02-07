@@ -2,7 +2,7 @@
 const baseUrl = 'https://itunes.apple.com/search?term=';
 const searchForm = document.querySelector('#search-form');
 const resultsContainer = document.querySelector('#results-container');
-let player = document.querySelector('#audio-player');
+const player = document.querySelector('#audio-player');
 
 searchForm.addEventListener('submit', function (event) {
     // listen for the search form being submitted
@@ -52,6 +52,7 @@ function searchFunction(searchTerm) {
 
 
 function buildResultsHtml(resultsArray) {
+    // alerts the user if their search has zero results
     if (resultsArray.length === 0) {
         alert("No Results Found");
     } else {
@@ -59,7 +60,7 @@ function buildResultsHtml(resultsArray) {
     
             // artworkUrl100 -- ARTWORK
             let artDiv = document.createElement('div');
-            // artDiv.classList.add('art-container');
+            artDiv.classList.add('art-container');
             let artElement = document.createElement('img');
             artElement.src = result.artworkUrl100;
             artDiv.appendChild(artElement);
@@ -67,6 +68,7 @@ function buildResultsHtml(resultsArray) {
     
             // trackName -- SONG TITLE
             let trackDiv = document.createElement('div');
+            trackDiv.classList.add('track-container');
             let trackElement = document.createElement('h3');
             trackElement.innerText = `Song: ${result.trackName}`;
             trackDiv.appendChild(trackElement);
@@ -74,6 +76,7 @@ function buildResultsHtml(resultsArray) {
     
             // artistName -- ARTIST NAME
             let artistDiv = document.createElement('div');
+            artistDiv.classList.add('artist-container');
             let artistElement = document.createElement('h3');
             artistElement.innerText = `Artist: ${result.artistName}`;
             artistDiv.appendChild(artistElement);
@@ -81,6 +84,7 @@ function buildResultsHtml(resultsArray) {
     
             // collectionName -- ALBUM TITLE
             let albumDiv = document.createElement('div');
+            albumDiv.classList.add('album-container');
             let albumElement = document.createElement('h3');
             albumElement.innerText = `Album: ${result.collectionName}`;
             albumDiv.appendChild(albumElement);
