@@ -15,3 +15,6 @@ COMMITTED
 
 added if else statement for buildResultsHtml
 COMMITTED
+
+added while statement to replace search results; added audio bar and linked it to artwork
+COMMITTED

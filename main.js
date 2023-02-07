@@ -2,6 +2,7 @@
 const baseUrl = 'https://itunes.apple.com/search?term=';
 const searchForm = document.querySelector('#search-form');
 const resultsContainer = document.querySelector('#results-container');
+let player = document.querySelector('#audio-player');
 
 searchForm.addEventListener('submit', function (event) {
     // listen for the search form being submitted
@@ -38,7 +39,10 @@ function searchFunction(searchTerm) {
         // when you have data from the above promise, console log it
         console.log('second .then executed');
         console.log('Here is what we got back from the API', resultData.results);
-        // above line may need to change specific to iTunes !!!!!!!!!!!!
+        // clear results out of #container on new search
+        while (resultsContainer.firstChild) {
+            resultsContainer.removeChild(resultsContainer.firstChild);
+        }
         buildResultsHtml(resultData.results);
     });
     
@@ -55,6 +59,7 @@ function buildResultsHtml(resultsArray) {
     
             // artworkUrl100 -- ARTWORK
             let artDiv = document.createElement('div');
+            // artDiv.classList.add('art-container');
             let artElement = document.createElement('img');
             artElement.src = result.artworkUrl100;
             artDiv.appendChild(artElement);
@@ -80,6 +85,11 @@ function buildResultsHtml(resultsArray) {
             albumElement.innerText = `Album: ${result.collectionName}`;
             albumDiv.appendChild(albumElement);
             resultsContainer.appendChild(albumDiv);
+
+            // when you click the album cover, it plays the preview
+            artElement.addEventListener('click', function (event) {
+                player.src = result.previewUrl;
+            })
         }
         
     }
