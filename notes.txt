@@ -3,3 +3,6 @@ COMMITTED
 
 copied example from class in JS using itunes.apple.com
 COMMITTED
+
+fixed problem in JS
+COMMITTED

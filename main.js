@@ -1,6 +1,6 @@
 fetch('https://itunes.apple.com', {
     method: 'GET',
-    headers: {'Content-Type'; 'application/json'},
+    headers: {'Content-Type': 'application/json'},
     // authorization (API key or password, etc) would also go here if needed
 })
 .then(function (response) {
