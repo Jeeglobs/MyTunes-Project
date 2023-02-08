@@ -21,3 +21,6 @@ COMMITTED
 
 added classes to elements within #results-container
 COMMITTED
+
+started CSS; having some trouble with flexbox in #results-container;
+COMMITTED

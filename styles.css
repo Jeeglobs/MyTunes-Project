@@ -2,3 +2,37 @@
     border: 1px solid black;
 }
 
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 8vw;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: -17px;
+}
+
+#disclaimer {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 2vw;
+    text-align: center;
+}
+
+/* #results-container {
+    display: flex;
+}
+
+.art-container {
+    display: flex;
+}
+
+.track-container {
+    display: flex;
+}
+
+.artist-container {
+    display: flex;
+}
+
+.album-container {
+    display: flex;
+} */
