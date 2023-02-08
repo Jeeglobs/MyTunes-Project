@@ -27,3 +27,6 @@ COMMITTED
 
 simplified JS, which helped with my CSS issues
 COMMITTED
+
+began working on results layout with flexbox
+COMMITTED
