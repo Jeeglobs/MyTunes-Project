@@ -57,38 +57,35 @@ function buildResultsHtml(resultsArray) {
         alert("No Results Found");
     } else {
         for (let result of resultsArray) {
+
+            // create div (card) to contain elements below
+            let resultCard = document.createElement('div');
+            resultCard.classList.add('result-card');
+            resultsContainer.appendChild(resultCard);
     
             // artworkUrl100 -- ARTWORK
-            let artDiv = document.createElement('div');
-            artDiv.classList.add('art-container');
             let artElement = document.createElement('img');
+            artElement.classList.add('art-element');
             artElement.src = result.artworkUrl100;
-            artDiv.appendChild(artElement);
-            resultsContainer.appendChild(artDiv);
+            resultCard.appendChild(artElement);
     
             // trackName -- SONG TITLE
-            let trackDiv = document.createElement('div');
-            trackDiv.classList.add('track-container');
             let trackElement = document.createElement('h3');
+            trackElement.classList.add('track-element');
             trackElement.innerText = `Song: ${result.trackName}`;
-            trackDiv.appendChild(trackElement);
-            resultsContainer.appendChild(trackDiv);
+            resultCard.appendChild(trackElement);
     
             // artistName -- ARTIST NAME
-            let artistDiv = document.createElement('div');
-            artistDiv.classList.add('artist-container');
             let artistElement = document.createElement('h3');
+            artistElement.classList.add('artist-element');
             artistElement.innerText = `Artist: ${result.artistName}`;
-            artistDiv.appendChild(artistElement);
-            resultsContainer.appendChild(artistDiv);
+            resultCard.appendChild(artistElement);
     
             // collectionName -- ALBUM TITLE
-            let albumDiv = document.createElement('div');
-            albumDiv.classList.add('album-container');
             let albumElement = document.createElement('h3');
+            albumElement.classList.add('album-element');
             albumElement.innerText = `Album: ${result.collectionName}`;
-            albumDiv.appendChild(albumElement);
-            resultsContainer.appendChild(albumDiv);
+            resultCard.appendChild(albumElement);
 
             // when you click the album cover, it plays the preview
             artElement.addEventListener('click', function (event) {

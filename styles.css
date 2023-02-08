@@ -17,22 +17,12 @@ h1 {
     text-align: center;
 }
 
-/* #results-container {
+#results-container {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.art-container {
-    display: flex;
+.result-card {
+    justify-content: center;
+    /* flex-wrap: wrap; */
 }
-
-.track-container {
-    display: flex;
-}
-
-.artist-container {
-    display: flex;
-}
-
-.album-container {
-    display: flex;
-} */

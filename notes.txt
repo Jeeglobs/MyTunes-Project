@@ -24,3 +24,6 @@ COMMITTED
 
 started CSS; having some trouble with flexbox in #results-container;
 COMMITTED
+
+simplified JS, which helped with my CSS issues
+COMMITTED
