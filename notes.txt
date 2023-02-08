@@ -30,3 +30,6 @@ COMMITTED
 
 began working on results layout with flexbox
 COMMITTED
+
+continued to work on styling; trying to make the search bar wider
+COMMITTED

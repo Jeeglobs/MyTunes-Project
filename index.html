@@ -16,14 +16,16 @@
 
   <main>
     <form id="search-form" method="post">
-      <div>
+      <div id="search-bar">
         <input type="text" name="search-form" id="search-text" placeholder="search for music" required>
         <!-- <label for="search-text">Search Term</label> -->
+        <button>Search</button>
       </div>
-      <button>Search</button>
     </form>
 
-    <audio id="audio-player" controls autoplay></audio>
+    <div id="audio-container">
+      <audio id="audio-player" controls autoplay></audio>
+    </div>
 
     <section id="results-container"></section>
   </main>
