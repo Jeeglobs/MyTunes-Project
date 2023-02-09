@@ -33,3 +33,6 @@ COMMITTED
 
 continued to work on styling; trying to make the search bar wider
 COMMITTED
+
+fixed search bar and finished styling
+COMMITTED
